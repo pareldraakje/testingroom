@@ -1,0 +1,17 @@
+*
+* CAOS2PRAY CHUNK
+*
+*# Pray-File "testingroom.agent"
+*# DS-Name "Testing Room"
+*# desc = "The Epic Testing Room. Such space much wow.\nThere are divider buttons so you can split up the small rooms into even smaller rooms. Go wild.\nBYOT (Bring Your Own Teleporter)\n\nBackground by xRainxOfxBloodx\nCode by Pilla"
+*# Agent Animation File = "trfavplace.c16"
+*# Agent Sprite First Image = 2
+*# Agent Animation Gallery = "trfavplace"
+*# Web URL = "https://pillazilla.wordpress.com/"
+*# Web Label = "Pilla's DS Agents"
+
+*# attach testingroom.blk
+*# attach trdoordivider.c16 trdoordivider.catalogue
+*# attach trfavplace.c16 trfavplace.catalogue
+
+*# link 00000_map.cos 36475_doors.cos 36475_favplace.cos

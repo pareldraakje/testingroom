@@ -1,0 +1,10 @@
+doif game "trfavplace" ne 1
+	new: simp 1 3 36475 "trfavplace" 1 0 1
+	attr 272
+	mvto 60741 9151
+	tick 10
+
+	setv game "trfavplace" 1
+endi
+
+cmrp 60741 9151 0

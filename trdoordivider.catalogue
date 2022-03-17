@@ -1,0 +1,3 @@
+TAG "Agent Help 1 1 36475"
+"Room Divider"
+"This button allows you to change the permeability between two neighbouring rooms. A green button means the permeability is currently at 100%, so everything can pass through. Orange means 50% and red means 0%."

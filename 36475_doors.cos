@@ -1,0 +1,87 @@
+enum 1 1 36475
+	kill targ
+next
+
+** Topleft
+new: simp 1 1 36475 "trdoordivider" 3 0 3000
+mvto 60414 8950
+** Topright
+new: simp 1 1 36475 "trdoordivider" 3 0 3000
+mvto 61095 8950
+
+** Topmid first cave first line
+new: simp 1 1 36475 "trdoordivider" 3 0 3000
+mvto 60212 9240
+** Topmid first cave second line
+new: simp 1 1 36475 "trdoordivider" 3 0 3000
+mvto 60372 9240
+
+** Topmid second cave first line
+new: simp 1 1 36475 "trdoordivider" 3 0 3000
+mvto 60663 9240
+** Topmid second cave second line
+new: simp 1 1 36475 "trdoordivider" 3 0 3000
+mvto 60833 9240
+
+** Topmid third cave first line
+new: simp 1 1 36475 "trdoordivider" 3 0 3000
+mvto 61137 9240
+** Topmid third cave second line
+new: simp 1 1 36475 "trdoordivider" 3 0 3000
+mvto 61268 9240
+
+** Bottommid first cave
+new: simp 1 1 36475 "trdoordivider" 3 0 3000
+mvto 60411 9520
+** Bottommid second cave
+new: simp 1 1 36475 "trdoordivider" 3 0 3000
+mvto 61083 9520
+
+** Bottom cave
+new: simp 1 1 36475 "trdoordivider" 3 0 3000
+mvto 60275 9910
+new: simp 1 1 36475 "trdoordivider" 3 0 3000
+mvto 60452 9910
+new: simp 1 1 36475 "trdoordivider" 3 0 3000
+mvto 60631 9910
+new: simp 1 1 36475 "trdoordivider" 3 0 3000
+mvto 60811 9910
+new: simp 1 1 36475 "trdoordivider" 3 0 3000
+mvto 61000 9910
+new: simp 1 1 36475 "trdoordivider" 3 0 3000
+mvto 61193 9910
+
+** Constructor script
+scrp 1 1 36475 10
+** Attributes: activateable 4 + invisible 16 = 20
+	attr 20
+** Bhvr: 0, creatures can't interact
+	bhvr 0
+endm
+
+** Pointer click script
+scrp 1 1 36475 1
+** Change the door pose
+	doif pose eq 2
+		pose 0
+	else
+		setv va02 pose
+		addv va02 1
+		pose va02
+	endi
+** va00: left room
+** va01: right room
+
+	setv va00 grap posx posy
+	setv va02 posx
+	addv va02 9
+	setv va01 grap va02 posy
+
+	doif pose eq 0
+		door va00 va01 100
+	elif pose eq 1
+		door va00 va01 50
+	else
+		door va00 va01 0
+	endi
+endm
